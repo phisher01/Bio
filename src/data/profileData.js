@@ -32,9 +32,8 @@ export const profileData = {
 
 export const professionalData = {
   workExperience: [
-    'SDE-II (Automation Engineer) at BharatPe, Gurugram',
-    'Specializes in building scalable automation frameworks and robust testing pipelines',
-    'Strong focus on engineering quality, reliability, and problem-solving at scale',
+    { company: 'BharatPe', role: 'SDE-II · Automation Engineer', location: 'DLF Cyber City, DLF Phase 2, Sector 24, Gurugram', status: 'current' },
+    { company: 'MobiKwik', role: 'Software Engineer', location: 'Gurugram', status: 'previous' },
   ],
   skills: [
     'Test Automation',
@@ -55,6 +54,8 @@ export const professionalData = {
       title: 'Gold Medal – Bench Press Competition',
       description:
         'Won 1st place in a Bench Press competition at his gym, reflecting his dedication and strength in powerlifting.',
+      videoSrc: '/rishipratapsingh.mp4',
+      photoSrc: '/achievement-photo.jpg',
     },
   ],
   projects: [

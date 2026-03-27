@@ -7,8 +7,9 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-wedding-gold/20 bg-wedding-cream/85 backdrop-blur">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3 md:px-6">
-        <a href="#hero" className="font-display text-xl tracking-wide text-wedding-wood md:text-2xl">
-          {profileData.fullName}
+        <a href="#hero" className="font-display tracking-wide text-wedding-wood">
+          <span className="text-xl md:hidden">Rishi</span>
+          <span className="hidden text-xl md:inline">Rishi Pratap Singh</span>
         </a>
 
         <button
