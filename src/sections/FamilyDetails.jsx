@@ -1,110 +1,156 @@
 import { motion } from 'framer-motion'
 import SectionTitle from '../components/common/SectionTitle'
-import { familyData } from '../data/profileData'
 
-const familyMembers = [
-  {
-    emoji: '👔',
-    name: 'Anil Kumar',
-    relation: 'Father',
-    role: 'Tailor · Home Shop',
-    color: 'from-amber-50 to-orange-50',
-    border: 'border-amber-200/60',
-  },
-  {
-    emoji: '🏠',
-    name: 'Kamlesh',
-    relation: 'Mother',
-    role: 'Homemaker',
-    color: 'from-pink-50 to-rose-50',
-    border: 'border-pink-200/60',
-  },
-  {
-    emoji: '👦',
-    name: 'Gagan Pratap Singh',
-    relation: 'Younger Brother',
-    role: 'Family',
-    color: 'from-blue-50 to-sky-50',
-    border: 'border-blue-200/60',
-  },
+const featuredMembers = [
   {
     emoji: '🎖️',
     name: 'Shri Ram Ji',
     relation: 'Grandfather',
-    role: 'Retired Enforcement Officer · PF Dept, Gurugram',
-    color: 'from-yellow-50 to-amber-50',
-    border: 'border-yellow-300/60',
-    featured: true,
+    title: 'Retired Enforcement Officer',
+    org: 'Provident Fund Department, Gurugram',
+    desc: 'A man of principle and public service — dedicated decades of his life enforcing provident fund regulations, ensuring justice for working-class citizens of Gurugram.',
+    color: 'from-amber-50 via-yellow-50 to-orange-50',
+    border: 'border-amber-300/50',
+    badge: 'Government Service',
+    badgeColor: 'bg-amber-100 text-amber-800',
   },
   {
     emoji: '⚖️',
-    name: 'Santosh Kumar',
-    relation: 'Uncle',
-    role: 'Delhi High Court Advocate',
-    color: 'from-emerald-50 to-teal-50',
-    border: 'border-emerald-200/60',
+    name: 'Santosh Kumar & Vijay Laxmi',
+    relation: 'Uncle & Aunt · Delhi',
+    title: 'Advocates',
+    org: 'Delhi High Court',
+    desc: 'Residing in Delhi and practising as advocates at the Delhi High Court — upholding justice at one of India\'s most prestigious courts. A powerful symbol of legal excellence and integrity in the family.',
+    color: 'from-emerald-50 via-teal-50 to-cyan-50',
+    border: 'border-emerald-300/50',
+    badge: 'Delhi High Court',
+    badgeColor: 'bg-emerald-100 text-emerald-800',
+  },
+]
+
+const coreFamily = [
+  {
+    emoji: '🧵',
+    name: 'Anil Kumar',
+    relation: 'Father',
+    title: 'Proprietor',
+    org: 'Cloth Tailoring Business · Gurugram',
+    desc: 'Built his own cloth tailoring business from the ground up — no shortcuts, no support, just honest craft and relentless hard work. A self-made man whose dedication shaped the values Rishi carries today.',
+    color: 'from-amber-50 via-orange-50 to-yellow-50',
+    border: 'border-amber-200/60',
+    badge: 'Self-Made Entrepreneur',
+    badgeColor: 'bg-orange-100 text-orange-800',
   },
   {
-    emoji: '⚖️',
-    name: 'Laxmi',
-    relation: 'Aunt',
-    role: 'Delhi High Court Advocate',
-    color: 'from-emerald-50 to-teal-50',
-    border: 'border-emerald-200/60',
+    emoji: '👨‍💻',
+    name: 'Gagan Pratap Singh',
+    relation: 'Younger Brother',
+    title: 'Software Developer',
+    org: 'Hobfit',
+    desc: 'B.Tech in Computer Engineering from JC Bose University YMCA, Faridabad — the same college as Rishi. Both brothers chose the engineering path, reflecting a family culture of ambition and education.',
+    color: 'from-blue-50 via-sky-50 to-indigo-50',
+    border: 'border-blue-200/60',
+    badge: 'Engineer · Like Rishi',
+    badgeColor: 'bg-blue-100 text-blue-800',
   },
 ]
 
 export default function FamilyDetails() {
   return (
     <section id="family" className="px-4 py-16 md:py-24">
-      <div className="mx-auto w-full max-w-6xl">
+      <div className="mx-auto w-full max-w-6xl space-y-6">
+
         <SectionTitle
           eyebrow="Family"
           title="Family Background"
-          subtitle="A family built on honesty, hard work, and service — each member a story of dignity."
+          subtitle="Rooted in service, justice, and honest hard work — a family that stands for something."
         />
 
-        {/* Member cards */}
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {familyMembers.map((m, i) => (
+        {/* ── Featured: Grandfather + Uncle & Aunt ── */}
+        <div className="grid gap-5 md:grid-cols-2">
+          {featuredMembers.map((m, i) => (
             <motion.div
-              key={m.name + m.relation}
-              initial={{ opacity: 0, y: 22 }}
+              key={m.name}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.4, delay: i * 0.07, ease: 'easeOut' }}
-              className={`group relative overflow-hidden rounded-3xl border bg-gradient-to-br ${m.color} ${m.border} p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-md`}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className={`relative overflow-hidden rounded-3xl border bg-gradient-to-br ${m.color} ${m.border} p-7 shadow-soft`}
             >
-              {m.featured && (
-                <span className="absolute right-4 top-4 rounded-full bg-wedding-gold/20 px-2 py-0.5 text-[10px] uppercase tracking-widest text-wedding-goldDark">
-                  Revered
+              {/* Watermark emoji */}
+              <div className="absolute -right-4 -top-4 text-[7rem] opacity-[0.06] select-none">{m.emoji}</div>
+
+              <div className="relative">
+                {/* Badge */}
+                <span className={`inline-block rounded-full px-3 py-1 text-[10px] font-semibold uppercase tracking-widest ${m.badgeColor}`}>
+                  {m.badge}
                 </span>
-              )}
-              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/70 text-3xl shadow-sm">
-                {m.emoji}
+
+                {/* Relation + Name */}
+                <p className="mt-4 text-[11px] uppercase tracking-widest text-wedding-muted">{m.relation}</p>
+                <h3 className="mt-1 font-display text-2xl text-wedding-wood">{m.name}</h3>
+
+                {/* Title + Org */}
+                <div className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-0.5">
+                  <span className="text-sm font-semibold text-wedding-wood">{m.title}</span>
+                  <span className="text-wedding-muted">·</span>
+                  <span className="text-sm text-wedding-muted">{m.org}</span>
+                </div>
+
+                {/* Divider */}
+                <div className="my-4 h-px w-full bg-wedding-gold/15" />
+
+                {/* Description */}
+                <p className="text-sm leading-relaxed text-wedding-muted">{m.desc}</p>
               </div>
-              <p className="text-[11px] uppercase tracking-widest text-wedding-muted">{m.relation}</p>
-              <p className="mt-1 font-display text-xl text-wedding-wood">{m.name}</p>
-              <p className="mt-1 text-xs leading-relaxed text-wedding-muted">{m.role}</p>
             </motion.div>
           ))}
         </div>
 
-        {/* Family values quote */}
+        {/* ── Father + Brother ── */}
+        <div className="grid gap-5 md:grid-cols-2">
+          {coreFamily.map((m, i) => (
+            <motion.div
+              key={m.name}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className={`relative overflow-hidden rounded-3xl border bg-gradient-to-br ${m.color} ${m.border} p-7 shadow-soft`}
+            >
+              <div className="absolute -right-4 -top-4 text-[7rem] opacity-[0.06] select-none">{m.emoji}</div>
+              <div className="relative">
+                <span className={`inline-block rounded-full px-3 py-1 text-[10px] font-semibold uppercase tracking-widest ${m.badgeColor}`}>
+                  {m.badge}
+                </span>
+                <p className="mt-4 text-[11px] uppercase tracking-widest text-wedding-muted">{m.relation}</p>
+                <h3 className="mt-1 font-display text-2xl text-wedding-wood">{m.name}</h3>
+                <div className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-0.5">
+                  <span className="text-sm font-semibold text-wedding-wood">{m.title}</span>
+                  <span className="text-wedding-muted">·</span>
+                  <span className="text-sm text-wedding-muted">{m.org}</span>
+                </div>
+                <div className="my-4 h-px w-full bg-wedding-gold/15" />
+                <p className="text-sm leading-relaxed text-wedding-muted">{m.desc}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* ── Values quote ── */}
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.45, delay: 0.2 }}
-          className="relative mt-6 overflow-hidden rounded-3xl border border-wedding-gold/25 bg-white px-8 py-7 shadow-soft md:px-12"
+          transition={{ duration: 0.45 }}
+          className="relative overflow-hidden rounded-3xl border border-wedding-gold/25 bg-white px-8 py-8 shadow-soft md:px-12"
         >
-          <span className="absolute -right-2 -top-4 font-display text-[8rem] leading-none text-wedding-gold/8 select-none">
-            "
-          </span>
+          <span className="absolute -right-2 -top-4 font-display text-[8rem] leading-none text-wedding-gold/8 select-none">"</span>
           <p className="relative max-w-3xl font-display text-lg leading-relaxed text-wedding-wood md:text-xl">
-            {familyData.values}
+            A family where a grandfather served with integrity in government service, uncle and aunt uphold justice at the Delhi High Court, and a father built his livelihood with honest hands — these roots run deep in Rishi.
           </p>
         </motion.div>
+
       </div>
     </section>
   )
