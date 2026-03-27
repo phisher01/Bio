@@ -13,7 +13,7 @@ const supportCards = [
   {
     emoji: '✨',
     label: 'Personality',
-    items: lifestyleData.personalityTraits,
+    items: lifestyleData.personalityTraits.map((t) => `${t.icon} ${t.label}`),
     color: 'from-purple-50 to-violet-50',
     border: 'border-purple-200/50',
   },

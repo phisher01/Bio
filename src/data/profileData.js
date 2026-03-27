@@ -13,7 +13,7 @@ export const profileData = {
   fullName: 'Rishi Pratap Singh',
   tagline: 'Software Engineer at BharatPe | Fitness Enthusiast | Family-Oriented',
   intro:
-    'Passionate automation engineer with strong problem-solving skills and a keen interest in building scalable systems. Also a dedicated fitness enthusiast focused on physique building and explosive powerlifting movements.',
+    'Passionate software engineer with strong problem-solving skills and a keen interest in building scalable systems. Also a dedicated fitness enthusiast focused on physique building and explosive powerlifting movements.',
   education: 'B.Tech in Information Technology, J.C. Bose University of Science & Technology YMCA, Faridabad',
   profession: 'Software Engineer',
   company: 'BharatPe',
@@ -22,6 +22,8 @@ export const profileData = {
   email: 'rishi.pratap.singh@example.com',
   whatsapp: '+919000012345',
   profileImage: '/pic.jpeg',
+  linkedin: 'https://www.linkedin.com/in/rishi-pratap-singh-aa46291a0/',
+  instagram: 'https://instagram.com/rishipratapsinghh?igsh=MXhzbmVoaDQxemthdg==',
 }
 
 export const professionalData = {
@@ -75,7 +77,18 @@ export const lifestyleData = {
   hobbies: ['Fitness & Bodybuilding', 'Powerlifting (explosive movements)', 'Physique Building'],
   travelInterests: ['Exploring new cities', 'Nature retreats', 'Weekend getaways', 'Hill stations', 'Road trips', 'Cultural experiences'],
   foodPreferences: ['High-protein home-cooked meals', 'Nutrition-focused eating'],
-  personalityTraits: ['Disciplined', 'Determined', 'Problem-solver', 'Passionate'],
+  personalityTraits: [
+    { label: 'Gym every morning', icon: '🌅', category: 'routine' },
+    { label: 'Engineer by day', icon: '💻', category: 'profession' },
+    { label: 'Family evenings', icon: '🏡', category: 'culture' },
+    { label: 'Weekend explorer', icon: '🗺️', category: 'hobby' },
+    { label: 'Gold medalist lifter', icon: '🥇', category: 'hobby' },
+    { label: 'Protein & clean diet', icon: '🥗', category: 'routine' },
+    { label: 'Grounded & respectful', icon: '🤝', category: 'culture' },
+    { label: 'Honest & dependable', icon: '🫶', category: 'culture' },
+    { label: 'Calm problem solver', icon: '🧠', category: 'profession' },
+    { label: 'Team player at work', icon: '🚀', category: 'profession' },
+  ],
 }
 
 export const galleryImages = [

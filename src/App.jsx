@@ -4,6 +4,7 @@ import Contact from './sections/Contact'
 import FamilyDetails from './sections/FamilyDetails'
 import Footer from './sections/Footer'
 import Hero from './sections/Hero'
+import LifeCards from './sections/LifeCards'
 import LifestyleInterests from './sections/LifestyleInterests'
 import PhotoGallery from './sections/PhotoGallery'
 import ProfessionalDetails from './sections/ProfessionalDetails'
@@ -16,9 +17,10 @@ function App() {
         <Hero />
         <AboutMe />
         <ProfessionalDetails />
+        <PhotoGallery />
         <FamilyDetails />
         <LifestyleInterests />
-        <PhotoGallery />
+        <LifeCards />
         <Contact />
       </main>
       <Footer />
