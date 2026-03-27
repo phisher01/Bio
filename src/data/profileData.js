@@ -1,9 +1,3 @@
-import gallery1 from '../assets/gallery/gallery-1.svg'
-import gallery2 from '../assets/gallery/gallery-2.svg'
-import gallery3 from '../assets/gallery/gallery-3.svg'
-import gallery4 from '../assets/gallery/gallery-4.svg'
-import gallery5 from '../assets/gallery/gallery-5.svg'
-import gallery6 from '../assets/gallery/gallery-6.svg'
 
 export const navItems = [
   { label: 'Home', href: '#hero' },
@@ -79,16 +73,19 @@ export const familyData = {
 
 export const lifestyleData = {
   hobbies: ['Fitness & Bodybuilding', 'Powerlifting (explosive movements)', 'Physique Building'],
-  travelInterests: ['Exploring new cities', 'Nature retreats', 'Weekend getaways'],
+  travelInterests: ['Exploring new cities', 'Nature retreats', 'Weekend getaways', 'Hill stations', 'Road trips', 'Cultural experiences'],
   foodPreferences: ['High-protein home-cooked meals', 'Nutrition-focused eating'],
   personalityTraits: ['Disciplined', 'Determined', 'Problem-solver', 'Passionate'],
 }
 
 export const galleryImages = [
-  { src: gallery1, alt: 'Portrait moment 1' },
-  { src: gallery2, alt: 'Portrait moment 2' },
-  { src: gallery3, alt: 'Portrait moment 3' },
-  { src: gallery4, alt: 'Portrait moment 4' },
-  { src: gallery5, alt: 'Portrait moment 5' },
-  { src: gallery6, alt: 'Portrait moment 6' },
+  { src: '/Photos/WhatsApp Image 2026-03-27 at 16.11.25.jpeg', alt: 'Rishi 1' },
+  { src: '/Photos/WhatsApp Image 2026-03-27 at 16.11.25 (1).jpeg', alt: 'Rishi 2' },
+  { src: '/Photos/WhatsApp Image 2026-03-27 at 16.11.26.jpeg', alt: 'Rishi 3' },
+  { src: '/Photos/WhatsApp Image 2026-03-27 at 16.11.26 (1).jpeg', alt: 'Rishi 4' },
+  { src: '/Photos/WhatsApp Image 2026-03-27 at 16.11.27.jpeg', alt: 'Rishi 5' },
+  { src: '/Photos/WhatsApp Image 2026-03-27 at 16.11.27 (1).jpeg', alt: 'Rishi 6' },
+  { src: '/Photos/WhatsApp Image 2026-03-27 at 16.11.27 (2).jpeg', alt: 'Rishi 7' },
+  { src: '/Photos/WhatsApp Image 2026-03-27 at 16.11.28.jpeg', alt: 'Rishi 8' },
+  { src: '/Photos/WhatsApp Image 2026-03-27 at 16.11.29.jpeg', alt: 'Rishi 9' },
 ]

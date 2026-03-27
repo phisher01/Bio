@@ -9,7 +9,7 @@ export default function PhotoGallery() {
         <SectionTitle
           eyebrow="Memories"
           title="Photo Gallery"
-          subtitle="A curated visual glimpse, using placeholders that can be replaced with personal photos."
+          // subtitle="A curated visual glimpse, using placeholders that can be replaced with personal photos."
         />
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

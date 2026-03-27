@@ -12,7 +12,7 @@ const detailCards = [
   {
     icon: '💼',
     label: 'Profession',
-    value: profileData.profession,
+    value: 'SDE-II · ' + profileData.profession,
     sub: profileData.company + ', Gurugram',
   },
   {
