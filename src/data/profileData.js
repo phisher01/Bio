@@ -94,12 +94,10 @@ export const lifestyleData = {
 
 export const galleryImages = [
   { src: '/Photos/WhatsApp Image 2026-03-27 at 16.11.25.jpeg', alt: 'Rishi 1' },
-  { src: '/Photos/WhatsApp Image 2026-03-27 at 16.11.25 (1).jpeg', alt: 'Rishi 2' },
-  { src: '/Photos/WhatsApp Image 2026-03-27 at 16.11.26.jpeg', alt: 'Rishi 3' },
-  { src: '/Photos/WhatsApp Image 2026-03-27 at 16.11.26 (1).jpeg', alt: 'Rishi 4' },
-  { src: '/Photos/WhatsApp Image 2026-03-27 at 16.11.27.jpeg', alt: 'Rishi 5' },
-  { src: '/Photos/WhatsApp Image 2026-03-27 at 16.11.27 (1).jpeg', alt: 'Rishi 6' },
-  { src: '/Photos/WhatsApp Image 2026-03-27 at 16.11.27 (2).jpeg', alt: 'Rishi 7' },
-  { src: '/Photos/WhatsApp Image 2026-03-27 at 16.11.28.jpeg', alt: 'Rishi 8' },
-  { src: '/Photos/WhatsApp Image 2026-03-27 at 16.11.29.jpeg', alt: 'Rishi 9' },
+  { src: '/Photos/WhatsApp Image 2026-03-27 at 16.11.26 (1).jpeg', alt: 'Rishi 2' },
+  { src: '/Photos/WhatsApp Image 2026-03-27 at 16.11.27.jpeg', alt: 'Rishi 3' },
+  { src: '/Photos/WhatsApp Image 2026-03-27 at 16.11.27 (1).jpeg', alt: 'Rishi 4' },
+  { src: '/Photos/WhatsApp Image 2026-03-27 at 16.11.27 (2).jpeg', alt: 'Rishi 5' },
+  { src: '/Photos/WhatsApp Image 2026-03-27 at 16.11.28.jpeg', alt: 'Rishi 6' },
+  { src: '/Photos/WhatsApp Image 2026-03-27 at 16.11.29.jpeg', alt: 'Rishi 7' },
 ]
