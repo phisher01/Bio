@@ -6,8 +6,8 @@ const featuredMembers = [
     emoji: '🎖️',
     name: 'Shri Ram Ji',
     relation: 'Grandfather',
-    title: 'Retired EPFO Officer',
-    org: 'Worked at EPFO, Gurugram',
+    title: 'Enforcement Officer (Rtd)',
+    org: 'E.P.F.O  Gurugram',
     desc: 'Shri Ram Ji had worked in EPFO, Gurugram. A man of principle and public service, he dedicated decades of his life enforcing provident fund regulations and ensuring justice for working-class citizens.',
     color: 'from-amber-50 via-yellow-50 to-orange-50',
     border: 'border-amber-300/50',
@@ -15,31 +15,55 @@ const featuredMembers = [
     badgeColor: 'bg-amber-100 text-amber-800',
   },
   {
-    emoji: '⚖️',
-    name: 'Santosh Kumar & Vijay Laxmi',
-    relation: 'Uncle & Aunt · Delhi',
-    title: 'Professor (Law Faculty, DU) & Legal Professional',
-    org: 'University of Delhi · Legal Academia & Practice',
-    desc: 'Santosh Kumar is a Professor in the Law Faculty at DU and holds LLB, LLM, and PhD qualifications. Vijay Laxmi is an advocate who practices legal cases in the Delhi High Court and holds LLB and LLM degrees. Together, they reflect the family\'s strong foundation in legal education and excellence.',
-    color: 'from-emerald-50 via-teal-50 to-cyan-50',
-    border: 'border-emerald-300/50',
-    badge: 'Law Faculty, DU',
-    badgeColor: 'bg-emerald-100 text-emerald-800',
-  },
-]
-
-const coreFamily = [
-  {
     emoji: '🧵',
     name: 'Anil Kumar',
     relation: 'Father',
-    title: 'Proprietor',
-    org: 'Business Owner · Faridabad',
+    title: 'Own Business',
+    org: 'Faridabad',
     desc: 'He runs his own business in town with honesty, dedication, and relentless hard work. A self-made man whose commitment shaped the values Rishi carries today.',
     color: 'from-amber-50 via-orange-50 to-yellow-50',
     border: 'border-amber-200/60',
     badge: 'Self-Made Entrepreneur',
     badgeColor: 'bg-orange-100 text-orange-800',
+  },
+  {
+    emoji: '👩',
+    name: 'Kamlesh',
+    relation: 'Mother',
+    title: 'Homemaker',
+    org: '',
+    desc: 'A caring and grounded presence at home, shaping strong family values every day.',
+    color: 'from-rose-50 via-pink-50 to-orange-50',
+    border: 'border-rose-200/60',
+    badge: 'Family Strength',
+    badgeColor: 'bg-rose-100 text-rose-800',
+  },
+]
+
+const coreFamily = [
+  {
+    emoji: '⚖️',
+    name: 'Santosh Kumar',
+    relation: 'Uncle · Delhi',
+    title: 'Advocate, Delhi High Court',
+    org: 'LLB, LLM, PhD · Delhi University',
+    desc: 'Santosh Kumar is an advocate at the Delhi High Court and holds LLB, LLM, and PhD qualifications from Delhi University.',
+    color: 'from-emerald-50 via-teal-50 to-cyan-50',
+    border: 'border-emerald-300/50',
+    badge: 'Delhi High Court',
+    badgeColor: 'bg-emerald-100 text-emerald-800',
+  },
+  {
+    emoji: '⚖️',
+    name: 'Vijay Laxmi',
+    relation: 'Aunt · Delhi',
+    title: 'Advocate, Delhi High Court',
+    org: 'M.A (English), LLB, LLM · Kurukshetra University',
+    desc: 'Vijay Laxmi is an advocate who practices legal cases in the Delhi High Court and completed M.A (English) from Kurukshetra University, along with LLB and LLM degrees.',
+    color: 'from-emerald-50 via-teal-50 to-cyan-50',
+    border: 'border-emerald-300/50',
+    badge: 'Delhi High Court',
+    badgeColor: 'bg-emerald-100 text-emerald-800',
   },
   {
     emoji: '👨‍💻',
@@ -50,8 +74,20 @@ const coreFamily = [
     desc: 'B.Tech in Computer Engineering from JC Bose University YMCA, Faridabad. Both brothers chose the engineering path, reflecting a family culture of ambition and education.',
     color: 'from-blue-50 via-sky-50 to-indigo-50',
     border: 'border-blue-200/60',
-    badge: 'Engineer · Like Rishi',
+    badge: 'Engineer',
     badgeColor: 'bg-blue-100 text-blue-800',
+  },
+  {
+    emoji: '🏠',
+    name: 'Residential Address',
+    relation: 'Home · Faridabad',
+    title: 'H.no. 1113/6',
+    org: 'Parwaitya Colony, NIT Faridabad, Haryana',
+    desc: 'Family residence in Faridabad.',
+    color: 'from-slate-50 via-zinc-50 to-stone-50',
+    border: 'border-slate-200/70',
+    badge: 'Address',
+    badgeColor: 'bg-slate-100 text-slate-800',
   },
 ]
 
@@ -93,15 +129,22 @@ export default function FamilyDetails() {
                 {/* Title + Org */}
                 <div className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-0.5">
                   <span className="text-sm font-semibold text-wedding-wood">{m.title}</span>
-                  <span className="text-wedding-muted">·</span>
-                  <span className="text-sm text-wedding-muted">{m.org}</span>
+                  {m.org ? (
+                    <>
+                      <span className="text-wedding-muted">·</span>
+                      {m.name === 'Shri Ram Ji' ? (
+                        <span className="inline-flex items-center rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-semibold text-amber-800 ring-1 ring-amber-200">
+                          {m.org}
+                        </span>
+                      ) : (
+                        <span className="text-sm text-wedding-muted">{m.org}</span>
+                      )}
+                    </>
+                  ) : null}
                 </div>
-
-                {/* Divider */}
-                <div className="my-4 h-px w-full bg-wedding-gold/15" />
-
-                {/* Description */}
-                <p className="text-sm leading-relaxed text-wedding-muted">{m.desc}</p>
+                {m.name === 'Shri Ram Ji' ? (
+                  <p className="mt-2 text-sm text-wedding-muted">Mobile: 9711337970</p>
+                ) : null}
               </div>
             </motion.div>
           ))}
@@ -125,13 +168,29 @@ export default function FamilyDetails() {
                 </span>
                 <p className="mt-4 text-[11px] uppercase tracking-widest text-wedding-muted">{m.relation}</p>
                 <h3 className="mt-1 font-display text-2xl text-wedding-wood">{m.name}</h3>
-                <div className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-0.5">
-                  <span className="text-sm font-semibold text-wedding-wood">{m.title}</span>
-                  <span className="text-wedding-muted">·</span>
-                  <span className="text-sm text-wedding-muted">{m.org}</span>
-                </div>
-                <div className="my-4 h-px w-full bg-wedding-gold/15" />
-                <p className="text-sm leading-relaxed text-wedding-muted">{m.desc}</p>
+                {m.name === 'Santosh Kumar' || m.name === 'Vijay Laxmi' ? (
+                  <div className="mt-2 space-y-1">
+                    {m.org ? <p className="text-sm font-semibold text-wedding-wood">{m.org}</p> : null}
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="inline-flex items-center rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-semibold text-amber-800 ring-1 ring-amber-200">
+                        Advocate
+                      </span>
+                      <span className="inline-flex items-center rounded-full bg-emerald-100 px-2.5 py-0.5 text-xs font-semibold text-emerald-800 ring-1 ring-emerald-200">
+                        Delhi High Court
+                      </span>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-0.5">
+                    <span className="text-sm font-semibold text-wedding-wood">{m.title}</span>
+                    {m.org ? (
+                      <>
+                        <span className="text-wedding-muted">·</span>
+                        <span className="text-sm text-wedding-muted">{m.org}</span>
+                      </>
+                    ) : null}
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}

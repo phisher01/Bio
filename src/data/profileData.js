@@ -65,13 +65,13 @@ export const professionalData = {
 }
 
 export const familyData = {
-  father: 'Anil Kumar – Tailor (runs a shop from home)',
+  father: 'Anil Kumar – Own Business (Faridabad)',
   mother: 'Kamlesh – Homemaker',
   siblings: 'Younger brother: Gagan Pratap Singh',
-  grandfather: 'Shri Ram Ji – Retired Enforcement Officer, Provident Fund, Gurugram',
-  uncleAunt: 'Santosh Kumar & Laxmi – Delhi High Court Advocates',
+  grandfather: 'Shri Ram Ji – Enforcement Officer (Rtd), E.P.F.O  Gurugram',
+  uncleAunt: 'Santosh Kumar & Vijay Laxmi – Law Faculty, DU and Delhi High Court',
   values:
-    'A family rooted in hard work, dignity, and integrity. From a tailor who built his livelihood through honest craft, to advocates who uphold justice, every member reflects the values of dedication and purpose.',
+    'A family rooted in hard work, dignity, and integrity. From a father running his own business in Faridabad to legal professionals and educators upholding justice, every member reflects dedication and purpose.',
 }
 
 export const lifestyleData = {
