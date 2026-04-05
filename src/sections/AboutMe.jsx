@@ -9,8 +9,8 @@ export default function AboutMe() {
       <div className="mx-auto w-full max-w-6xl">
 
         <SectionTitle
-          eyebrow="About"
-          title="About Rishi"
+          eyebrow="Profile"
+          title="Rishi Pratap Singh"
           subtitle="A glimpse into who he is — his values, his career, and the life he's building."
         />
 

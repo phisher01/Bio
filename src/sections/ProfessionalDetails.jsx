@@ -112,7 +112,7 @@ export default function ProfessionalDetails() {
             </div>
           </motion.div>
 
-          {/* ── Col 2: Achievement + Currently At ── */}
+          {/* ── Col 2: Currently At ── */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -120,34 +120,6 @@ export default function ProfessionalDetails() {
             transition={{ duration: 0.45, delay: 0.08 }}
             className="flex flex-col gap-4"
           >
-            {professionalData.achievements.map((ach) => (
-              <div
-                key={ach.title}
-                className="overflow-hidden rounded-3xl border border-wedding-gold/30 bg-gradient-to-br from-amber-50 via-white to-yellow-50 shadow-soft"
-              >
-                <div className="relative p-5 pb-3">
-                  <div className="absolute -right-4 -top-4 text-[5rem] opacity-[0.07] select-none">🥇</div>
-                  <span className="inline-block rounded-full bg-wedding-gold/15 px-3 py-1 text-[10px] uppercase tracking-widest text-wedding-goldDark">
-                    🏆 Achievement
-                  </span>
-                  <p className="mt-2 font-display text-lg leading-snug text-wedding-wood">{ach.title}</p>
-                  <p className="mt-1 text-xs leading-relaxed text-wedding-muted">{ach.description}</p>
-                </div>
-                <div className="mx-4 mb-4 overflow-hidden rounded-2xl border border-wedding-gold/20">
-                  <video
-                    ref={videoRef}
-                    src={ach.videoSrc}
-                    controls
-                    playsInline
-                    preload="metadata"
-                    className="aspect-video w-full object-cover"
-                  >
-                    Your browser does not support video.
-                  </video>
-                </div>
-              </div>
-            ))}
-
             <div className="rounded-3xl border border-wedding-gold/20 bg-white p-5 shadow-soft">
               <span className="inline-block rounded-full bg-green-50 px-3 py-1 text-[10px] uppercase tracking-widest text-green-700">
                 Currently at
@@ -157,6 +129,16 @@ export default function ProfessionalDetails() {
               <div className="mt-3 h-px w-full bg-wedding-gold/15" />
               <p className="mt-3 text-xs leading-relaxed text-wedding-muted">
                 {professionalData.projects[0].description}
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-wedding-gold/20 bg-gradient-to-br from-white to-amber-50 p-5 shadow-soft">
+              <span className="inline-block rounded-full bg-amber-50 px-3 py-1 text-[10px] uppercase tracking-widest text-amber-700">
+                Annual Package
+              </span>
+              <p className="mt-2 font-display text-2xl text-wedding-wood">{profileData.annualPackage}</p>
+              <p className="mt-1 text-xs leading-relaxed text-wedding-muted">
+                Current compensation range reflecting Rishi's professional growth and role.
               </p>
             </div>
           </motion.div>
@@ -202,6 +184,43 @@ export default function ProfessionalDetails() {
                 </div>
               ))}
             </div>
+          </motion.div>
+
+          {/* ── Achievement (moved below Core Skills) ── */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.45, delay: 0.24 }}
+            className="flex flex-col gap-4 lg:col-span-2"
+          >
+            {(professionalData.achievements || []).map((ach) => (
+              <div
+                key={ach.title}
+                className="overflow-hidden rounded-3xl border border-wedding-gold/30 bg-gradient-to-br from-amber-50 via-white to-yellow-50 shadow-soft"
+              >
+                <div className="relative p-5 pb-3">
+                  <div className="absolute -right-4 -top-4 text-[5rem] opacity-[0.07] select-none">🥇</div>
+                  <span className="inline-block rounded-full bg-wedding-gold/15 px-3 py-1 text-[10px] uppercase tracking-widest text-wedding-goldDark">
+                    🏆 Achievement
+                  </span>
+                  <p className="mt-2 font-display text-lg leading-snug text-wedding-wood">{ach.title}</p>
+                  <p className="mt-1 text-xs leading-relaxed text-wedding-muted">{ach.description}</p>
+                </div>
+                <div className="mx-4 mb-4 overflow-hidden rounded-2xl border border-wedding-gold/20">
+                  <video
+                    ref={videoRef}
+                    src={ach.videoSrc}
+                    controls
+                    playsInline
+                    preload="metadata"
+                    className="aspect-video w-full object-cover"
+                  >
+                    Your browser does not support video.
+                  </video>
+                </div>
+              </div>
+            ))}
           </motion.div>
 
         </div>
