@@ -6,6 +6,7 @@ import { profileData } from '../data/profileData'
 const quickStats = [
   { value: 'BharatPe', label: 'Company' },
   { value: 'Gurugram', label: 'Location' },
+  { value: profileData.dateOfBirth, label: 'DOB' },
   { value: "'21 Batch", label: 'Graduate' },
 ]
 
