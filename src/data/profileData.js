@@ -12,6 +12,7 @@ export const navItems = [
 export const profileData = {
   fullName: 'Rishi Pratap Singh',
   dateOfBirth: '27/02/2000',
+  height: '5\'9"',
   tagline: 'Software Engineer at BharatPe | Fitness Enthusiast | Family-Oriented',
   intro:
     'Passionate software engineer with strong problem-solving skills and a keen interest in building scalable systems. Also a dedicated fitness enthusiast focused on physique building and explosive powerlifting movements.',
